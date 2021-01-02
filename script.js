@@ -12,8 +12,14 @@ function exam() {
   */
 
   /* Számoljunk el nullától egy paraméterként kapott tetszőleges számig
+  let parameter = x(x=tetszoleges szam)
+  for (let i = 0; i < parameter; i++){
+  } 
   */
-
+  let anyNumber = 54
+  for (let i = 0; i < anyNumber; i++) {
+    //console.log(i);   
+  }
   /* Nézd meg egy paraméterként érkező tömb hosszát
   */
 
