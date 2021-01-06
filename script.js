@@ -1,64 +1,115 @@
 function _load() {
-  /* Fordítsd meg a sorrendjét egy tömb elemeinek 
-  function solution(str) {
-    return str.split('').reverse().join('');
-  }
-  */
 
-  /* Rendezd emelkedő sorrendbe a számokat egy tömbön belül
+  // 1. Fordítsd meg a sorrendjét egy tömb elemeinek
+  
+  let numbers = [1, 2, 10, 30, 4];
+    console.log(numbers.reverse());
+  function sequence(numbers){ 
+    let x =  numbers.reverse();
+    return x;
+  }
+  console.log(sequence(numbers));
+  
+
+  /* 2. Rendezd emelkedő sorrendbe a számokat egy tömbön belül
   */
-  let mainArray = new Array(5,17,4,82,29,100,13,1,0,20,68,33,72,9);
+  let mainArray = [5,17,4,82,29,100,13,1,0,20,68,33,72,9];
   
   mainArray.sort(function(firstElement, secondElement) {
     return firstElement - secondElement;
   });
 
-  //console.log(mainArray);
+  console.log(mainArray);
 
   //backwards 
   mainArray.sort(function(firstElement, secondElement) {
     return secondElement - firstElement;
   });
-  //console.log(mainArray); 
+  console.log(mainArray); 
 
-  /* Add össze az összes számot egy tömbben
-  */
+  
+  // 2. Add össze az összes számot egy tömbben
+    
+  let numberArray = [1, 11, 111, 2, 22, 222];
 
-  /* Számoljunk el nullától egy paraméterként kapott tetszőleges számig
+  let sumArray = numberArray.reduce((previousValue, currentValue) => previousValue + currentValue);
+  console.log(sumArray);
+  
+  
+  /* 3. Számoljunk el nullától egy paraméterként kapott tetszőleges számig
   */
-  let anyNumber = 21;
-  for (let i = 0; i < anyNumber; i++) {
-    //console.log(i);   
+   
+  let anyNumber = 5;
+  for (let i = 0; i <= anyNumber; i++) {
+    console.log(i);   
+  }
+  
+
+  //Dorina megoldasa 
+  function Count(n) {
+    for (let i = 0; i <= n ; i++){
+      console.log(i);
+    }
+  }
+  Count(5);
+ 
+
+
+  //4. Nézd meg egy paraméterként érkező tömb hosszát
+  
+  let anyArray = ["duck", "dog", false, "cat", "mouse", true, "elephant", 8, "cicken", null];
+  
+  function arrayLength(arr) {
+    return arr.length;
   }
 
-  /* Nézd meg egy paraméterként érkező tömb hosszát
-  */
-  let anyArray = ["duck", "dog", "cat", "mouse", "elephant", "fish", "tiger", "lion", "bird", "eagle", "hawk", 8, "cicken", 10, "turkey", "goose", 1542, "whale", "shark", "deer", "bear", "wolf", "rabbit", "fox", "squarel", true, false, null];
-
-  for (let i = 0; i < anyArray.length; i++) {
-    //console.log(anyArray);
-  };
-
-  /* Ellenőrizd le, hogy egy paraméterként kapott szám két másik számmal osztható-e
+  let arrayElementNumber = arrayLength(anyArray);
+  
+  console.log(arrayElementNumber);
+  
+  
+  /* 5. Ellenőrizd le, hogy egy paraméterként kapott szám két másik számmal osztható-e
   */
 
-  // console.log(anyNumber);
+   console.log(anyNumber);
   
   for (let index = 1; index < anyNumber; index++) {
 
     if(index % 3 === 0){
-      //console.log("true"); 
+      console.log("true"); 
     } else if(index % 5 === 0) {
-      //console.log("true") 
+      console.log("true"); 
     }
-  };
+  } 
   
 
-  /* Rendezd egy tömbben a string-eket ABC sorrendbe
+  /* 6. Rendezd egy tömbben a string-eket ABC sorrendbe
   */
+  
+  let arrayFruits = ["Lemon", "Clementine", "Avocado", "Papaya", "Grapes", "Tomato", "Pear", "Kiwi", "Strawberry"];
+  //console.log(arrayFruits);
 
-  /* Vágd le egy string utolsó négy karakterét 
+
+  function myFunction(x) {
+    let sortedArrayFruits = arrayFruits.sort();
+    console.log(sortedArrayFruits);
+  }
+  myFunction();
+
+
+
+
+  /* 7. Vágd le egy string utolsó négy karakterét 
   */
+  let longString = "Understanding";
+  longString = longString.slice(0, -4); 
+  console.log(longString);
+    
+  //VAGY
+
+  let string = 'Running_from_the_hell';
+  string = string.slice(0, -4);
+  console.log(string); 
   
   
 
